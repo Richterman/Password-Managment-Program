@@ -42,11 +42,9 @@ private slots:
 
     void on_actionAdd_an_Account_triggered();
 
-    void on_accountListBoxSelect_editTextChanged(const QString &arg1);
+    void on_comboBox_currentTextChanged(const QString &arg1);
 
-    void on_accountListBoxSelect_textActivated(const QString &arg1);
-
-    void on_listBox_editTextChanged(const QString &arg1);
+    void on_comboBox_textActivated(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;

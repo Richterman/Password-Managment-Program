@@ -15,6 +15,8 @@ QList<QString> inputEmail;
 QList<QString> inputQuestion1;
 QList<QString> inputQuestion2;
 
+QList<QString> accountlist;
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -51,7 +53,7 @@ void MainWindow::on_btnCreateAccount_clicked()
     ui->editAnswer2->setEnabled(1);
     ui->editAnswer1->setEnabled(1);
     ui->label->setEnabled(0);
-    ui->listBox->setEnabled(0);
+    ui->comboBox->setEnabled(0);
     ui->label_2->setEnabled(1);
     ui->label_3->setEnabled(1);
     ui->label_5->setEnabled(1);
@@ -99,7 +101,7 @@ void MainWindow::on_btnCancel_clicked()
     ui->label_7->setEnabled(0);
     ui->label_8->setEnabled(0);
     ui->label_10->setEnabled(0);
-    ui->listBox->setEnabled(1);
+    ui->comboBox->setEnabled(1);
 
     ui->editAccountName->setText("null");
     ui->editUsername->setText("null");
@@ -146,7 +148,7 @@ void MainWindow::on_btnSave_clicked()
     ui->label_7->setEnabled(0);
     ui->label_8->setEnabled(0);
     ui->label_10->setEnabled(0);
-    ui->listBox->setEnabled(1);
+    ui->comboBox->setEnabled(1);
 
     ui->editAccountName->setText("null");
     ui->editUsername->setText("null");
@@ -156,6 +158,12 @@ void MainWindow::on_btnSave_clicked()
     ui->editQuestion2->setText("null");
     ui->editAnswer1->setText("null");
     ui->editAnswer2->setText("null");
+
+    accountlist.append(ui->editAccountName->text());
+
+
+    ui->comboBox->clear();
+    ui->comboBox->addItems(accountlist);
 
 }
 
@@ -202,5 +210,22 @@ void MainWindow::on_actionAdd_an_Account_triggered()
 }
 
 
+void MainWindow::on_comboBox_currentTextChanged(const QString &arg1)
+{
+
+}
 
 
+void MainWindow::on_comboBox_textActivated(const QString &arg1)
+{
+    if(ui->comboBox->currentText() == inputAccountName[1]) {
+        ui->editAccountName->setText(inputAnswer1[1]);
+        ui->editUsername->setText(inputUsername[1]);
+        ui->editPassword->setText(inputPassword[1]);
+        ui->editEmail->setText(inputEmail[1]);
+        ui->editQuestion1->setText(inputQuestion1[1]);
+        ui->editQuestion2->setText(inputQuestion2[1]);
+        ui->editAnswer1->setText(inputAnswer1[1]);
+        ui->editAnswer2->setText(inputAnswer2[1]);
+}
+}
