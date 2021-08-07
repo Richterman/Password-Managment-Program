@@ -1,0 +1,1 @@
+/usr/bin/clang++ -O3 -DNDEBUG CMakeFiles/account_Share.dir/account_Share_autogen/mocs_compilation.cpp.o CMakeFiles/account_Share.dir/main.cpp.o CMakeFiles/account_Share.dir/mainwindow.cpp.o -o account_Share  /usr/lib/libQt5Widgets.so.5.15.2 /usr/lib/libQt5Gui.so.5.15.2 /usr/lib/libQt5Core.so.5.15.2 

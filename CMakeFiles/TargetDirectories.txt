@@ -1,0 +1,4 @@
+/home/gary/Projects/homeBrew/build-account_Share-Linux_Desktop-Release/CMakeFiles/rebuild_cache.dir
+/home/gary/Projects/homeBrew/build-account_Share-Linux_Desktop-Release/CMakeFiles/edit_cache.dir
+/home/gary/Projects/homeBrew/build-account_Share-Linux_Desktop-Release/CMakeFiles/account_Share.dir
+/home/gary/Projects/homeBrew/build-account_Share-Linux_Desktop-Release/CMakeFiles/account_Share_autogen.dir
